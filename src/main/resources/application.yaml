@@ -1,2 +1,5 @@
+# Swagger2访问URL
+# http://localhost:8701/sysj/swagger-ui.html
+
 server:
-  port:8888
+  port: 8888
