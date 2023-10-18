@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-@Api(tags = "[Test]Tags")
+@Api(tags = "[Test]",value = "测试")
 @RestController
 @RequestMapping("/test")
 public class TestController {

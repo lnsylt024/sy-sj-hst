@@ -17,9 +17,8 @@ public class WebConfig {
     @Bean
     public FilterRegistrationBean tokenFilterRegistration(){
         FilterRegistrationBean bean = new FilterRegistrationBean();
-        bean.setFilter(new DelegatingFilterProxy("tokenFilter"));
+        bean.setFilter(new DelegatingFilterProxy("tokenFilter"));//与上面的方面名一致
         bean.addUrlPatterns("/*");
-        bean.setName("tokenFilter");
         bean.setOrder(1);
         return bean;
     }
