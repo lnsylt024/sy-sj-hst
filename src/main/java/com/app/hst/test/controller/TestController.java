@@ -1,5 +1,6 @@
 package com.app.hst.test.controller;
 
+import com.app.hst.common.base.controller.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,7 @@ import java.util.List;
 @Api(tags = "[Test]",value = "测试")
 @RestController
 @RequestMapping("/test")
-public class TestController {
+public class TestController extends BaseController {
 
     @ApiOperation(value ="获取数据",response = List.class,notes = "获取所有集合数据")
     @RequestMapping(value = "getList",method = RequestMethod.GET)
