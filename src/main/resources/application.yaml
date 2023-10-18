@@ -16,3 +16,8 @@ spring:
 #测试
 test:
   flg: true
+
+#日志信息(TRACE/DEBUG/INFO/WARN/ERROR)
+logging:
+  level:
+    springfox.documentation: TRACE
