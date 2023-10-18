@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-group = 'com.example'
+group = 'com.app'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -18,16 +18,52 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+   mavenCentral()
+//     maven {
+//         url 'http://maven.aliyun.com/nexus/content/groups/public/'
+//     }
 }
 
 dependencies {
+	//spring组件
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'com.mysql:mysql-connector-j'
-	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+    //swagger
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:2.0.2'
+
+    //插件fastjson
+    implementation group: 'com.alibaba', name: 'fastjson', version: '2.0.32'
+    //插件hutool
+    implementation 'cn.hutool:hutool-all:5.6.3'
+	//插件lombok
+	implementation 'org.projectlombok:lombok'
+    //插件poi
+    implementation "org.apache.poi:poi:4.1.2"
+    implementation "org.apache.poi:poi-ooxml:4.1.2"
+    implementation "org.apache.poi:poi-scratchpad:4.1.2"
+    implementation "org.apache.poi:poi-ooxml-schemas:4.1.2"
+    //插件 其他
+    implementation 'com.ibeetl:beetl:3.1.8.RELEASE'
+    implementation 'org.apache.commons:commons-lang3:3.3.2'
+    implementation group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    implementation 'com.ibm.icu:icu4j:69.1'
+
+	//插件 数据库(mysql/h2database)
+// 	runtimeOnly 'com.h2database:h2'
+// 	runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation 'com.h2database:h2'
+    implementation 'com.mysql:mysql-connector-j'
+
+	//annotationProcessor 'org.projectlombok:lombok'
+
+    //单独引用Lib
+    implementation fileTree(include: ['*.jar'], dir: 'lib')
+
+	//spring测试组件
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
