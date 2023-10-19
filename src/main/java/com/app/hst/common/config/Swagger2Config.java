@@ -54,7 +54,7 @@ public class Swagger2Config {
                 .title("API文档")
                 .description("API文档描述")
                 .termsOfServiceUrl("http://example.com/")
-                .contact(new Contact("ShenyangHST", "http://www.baidu.com","lnsylt@163.com"))
+                .contact(new Contact("ShenyangHST", "http://localhost:8888/hst/swagger-ui.html","lnsylt@163.com"))
                 .version("1.0")
                 .build();
     }

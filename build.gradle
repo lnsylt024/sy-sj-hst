@@ -51,14 +51,9 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.3.2'
     implementation group: 'org.reflections', name: 'reflections', version: '0.9.11'
     implementation 'com.ibm.icu:icu4j:69.1'
-
 	//插件 数据库(mysql/h2database)
-// 	runtimeOnly 'com.h2database:h2'
-// 	runtimeOnly 'com.mysql:mysql-connector-j'
     implementation 'com.h2database:h2'
     implementation 'com.mysql:mysql-connector-j'
-
-	//annotationProcessor 'org.projectlombok:lombok'
 
     //单独引用Lib
     implementation fileTree(include: ['*.jar'], dir: 'lib')
