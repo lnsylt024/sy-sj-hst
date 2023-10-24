@@ -30,17 +30,26 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
 
-    //swagger
-    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
-    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
-    implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:2.0.2'
+    //swagger2.x
+//     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+//     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+//     implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:2.0.2'
+
+    //swagger3.x
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+    implementation group: 'com.github.xiaoymin', name: 'knife4j-spring-boot-starter', version: '3.0.3'
+
+    //插件openapi文档
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.7.0'
 
     //插件fastjson
     implementation group: 'com.alibaba', name: 'fastjson', version: '2.0.32'
     //插件hutool
     implementation 'cn.hutool:hutool-all:5.6.3'
 	//插件lombok
-	implementation 'org.projectlombok:lombok'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
     //插件poi
     implementation "org.apache.poi:poi:4.1.2"
     implementation "org.apache.poi:poi-ooxml:4.1.2"

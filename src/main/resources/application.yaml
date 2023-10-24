@@ -1,5 +1,8 @@
-# Swagger2访问URL
+# Swagger2.X访问URL
 # http://localhost:8888/hst/swagger-ui.html
+
+# Swagger3.0.0访问URL
+#http://localhost:8888/hst/swagger-ui/index.html
 
 #服务器
 server:
@@ -9,13 +12,40 @@ server:
 
 #Spring组件
 spring:
+  #H2DataBase数据库
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+  datasource:
+     url: jdbc:h2:tcp://localhost/~/test
+     username: sa
+     password: sa
+     driverClassName: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+    generate-ddl: false
+
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
 
+  profiles:
+    active: dev
+
 #测试
 test:
   flg: true
+
+#数据库时间地域
+db:
+  time-zone: GMT+8
 
 #日志信息(TRACE/DEBUG/INFO/WARN/ERROR)
 logging:

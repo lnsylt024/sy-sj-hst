@@ -1,8 +1,11 @@
 package com.app.hst.test.repository;
 
-//@Repository
-//public interface TestRepository extends JpaRepository<TestEntity, Long> {
-//}
+import com.app.hst.test.entity.TestEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface TestRepository {
+@Repository
+public interface TestRepository extends JpaRepository<TestEntity, Long> {
+
 }
+

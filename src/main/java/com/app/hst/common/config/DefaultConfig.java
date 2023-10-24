@@ -12,4 +12,7 @@ public class DefaultConfig {
 
     @Value("${test.flg}")
     private String testFlg;
+
+    @Value("${db.time-zone}")
+    private String timeZone;
 }
