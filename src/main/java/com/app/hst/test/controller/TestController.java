@@ -39,7 +39,7 @@ public class TestController extends BaseController {
         return vos;
     }
 
-    @ApiOperation(value = "",response = TestVo.class, notes = "追加数据")
+    @ApiOperation(value = "保存数据",response = TestVo.class, notes = "追加数据")
     @RequestMapping(value = "/save", produces = "application/json", method = RequestMethod.POST)
     public Long save(@RequestBody TestVo vo){
         return service.createTest(vo);

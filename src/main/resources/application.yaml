@@ -27,14 +27,17 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
+      #create（先删后建）/none（本番用）/validate（验证）/update（修复）
       ddl-auto: update
     show-sql: true
     open-in-view: true
+    #true：自动创建或更新
     generate-ddl: false
 
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher
+      matching-strategy: ANT_PATH_MATCHER
+#      matching-strategy: PATH_PATTERN_PARSER
 
   profiles:
     active: dev
